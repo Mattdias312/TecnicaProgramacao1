@@ -13,22 +13,27 @@ public class Aula1Pessoa {
     public static void main(String[] args) {
         
         Pessoa pai;
-        pai = new Pessoa();
-        pai.nome = "Marcelo";
-        pai.qtdFilhoAux = 2;
-        pai.qtdIrmaos = 4;
-        System.out.println(pai.Aprensentar());
+        pai = new Pessoa("Marcelo","1111");
+        pai.setQtdFilhoAux(2);
+        pai.setQtdIrmaos(4);
         
-        Pessoa mae = new Pessoa();
-        mae.nome = "Gisle";
-        mae.qtdFilhoAux = 3;
-        mae.qtdIrmaos = 1;
+        System.out.println(pai.Aprensentar());
+        System.out.println("CPF Pai: " + pai.getCpf());
+        pai.setCpf("0000");
+        System.out.println("CPF Pai Novo: " + pai.getCpf());
+        
+        Pessoa mae = new Pessoa("Gisele","2222");
+        mae.setQtdFilhoAux(3);
+        mae.setQtdIrmaos(2);
         System.out.println(mae.Aprensentar());
         
-        mae.nomeFilhos[0] = "Matheus";
-        mae.nomeFilhos[1] = "Gabriela";
+        String[] filhos = {"Matheus","Gabriela"};
+        String[] irmaos = {"Regiane","Rafaela"};
+        mae.setNomeFilhos(filhos);
+        mae.setNomeIrmao(irmaos);
 
         System.out.println(mae.ApresentarFilhos());
+        System.out.println(mae.ApresentarIrmaos());
         
         
     }
