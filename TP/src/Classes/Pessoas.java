@@ -2,14 +2,14 @@
 package Classes;
 
   
-public class Pessoa {
+public class Pessoas {
     
     /*Metodo contrutor*/
-    public Pessoa(String nome){
+    public Pessoas(String nome){
         this.nome = nome;
     }
     
-    public Pessoa(String nome, String cpf){
+    public Pessoas(String nome, String cpf){
         this(nome);
         this.cpf = cpf;
     }
@@ -28,6 +28,20 @@ public class Pessoa {
     }
     public String getNome(){
         return this.nome;
+    }
+    
+    public void setGenero(String genero){
+        this.genero = genero;
+    }
+    public String getGenero(){
+        return this.genero;
+    }
+    
+    public void setTelefone(String telefone){
+        this.telefone = telefone;
+    }
+    public String getTelefone(){
+        return this.telefone;
     }
     
     public void setNomeFilhos(String[] nomeFilhos){
@@ -51,7 +65,7 @@ public class Pessoa {
         return this.qtdIrmaos;
     }
     public void setQtdFilhoAux(int qtdFilhoAux){
-        this.qtdIrmaos = qtdIrmaos;
+        this.qtdFilhoAux = qtdFilhoAux;
     }
     public int getQtdFilhoAux(){
         return this.qtdFilhoAux;
@@ -59,10 +73,12 @@ public class Pessoa {
 
     //Atributos da classe
     private String nome;
+    private String cpf;
+    private String genero;
+    private String telefone;
     private int qtdFilhoAux, qtdIrmaos, qtdIrmaoAux;
     private String[] nomeFilhos = new String[20];
     private String[] nomeIrmao = new String[20];
-    private String cpf;
     
     /*Método Apresentar, responde com o Nome 
     concatenado com a quantidade de Filhos.
