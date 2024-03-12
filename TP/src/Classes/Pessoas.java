@@ -92,7 +92,7 @@ public class Pessoas {
         String resposta = "Meus filhos são ";
         int qtdFilhoAux = 0;
         
-        for(int i=0;i<20;i++){
+        for(int i=0;i<nomeFilhos.length;i++){
         if(nomeFilhos[i] != null){
             qtdFilhoAux++;
            resposta +=  nomeFilhos[i] + ", ";
@@ -108,7 +108,7 @@ public class Pessoas {
         String resposta = "Meus irmãos são ";
         int qtdIrmaoAux = 0;
         
-        for(int i=0;i<20;i++){
+        for(int i=0;i<nomeIrmao.length;i++){
         if(nomeIrmao[i] != null){
             qtdIrmaoAux++;
            resposta +=  nomeIrmao[i] + ", ";

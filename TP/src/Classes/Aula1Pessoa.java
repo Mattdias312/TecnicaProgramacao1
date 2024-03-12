@@ -35,6 +35,19 @@ public class Aula1Pessoa {
         System.out.println(mae.ApresentarFilhos());
         System.out.println(mae.ApresentarIrmaos());
         
+        //#######################################################
+        
+        Pessoa maeDoJoao = new Pessoa("Maria");
+        Pessoa Joao = new Pessoa("João",maeDoJoao);
+        Pessoa irmaoJoao = new Pessoa("Jorel",maeDoJoao);
+           System.out.println("Nome: " + Joao.getNome());
+           Joao.setNome("João dos Santos");
+           System.out.println("Nome: " + Joao.getNome());
+           maeDoJoao.addFilho(Joao);
+           maeDoJoao.addFilho(irmaoJoao);
+           System.out.println("Mãe do João: "+Joao.getMae().getNome());
+           System.out.println("Irmão do João: "+Joao.getMae().getListaFilhos()[1].getNome());
+        
         
     }
     
