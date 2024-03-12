@@ -67,8 +67,19 @@ public class Pessoa {
     
     //*** Método para adicionar um filha a lista ****
     public void addFilho(Pessoa filho){
+        //Deve verificar se na lista de filhos se
+        //ja existe o objeto antes de adiconá-lo
+        
+        boolean encontrei = false;
+        for(int i=0;i<qtdFilhos;i++){
+            if(filho.equals(listaFilhos[i])){
+                encontrei = true;
+            }
+        }
+        if(!encontrei){
         listaFilhos[qtdFilhos]=filho;
         qtdFilhos++;
+        }
     }
     public void addIrmaos(Pessoa irmao){
         listaIrmaos[qtdIrmaos]=irmao;
