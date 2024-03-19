@@ -97,6 +97,15 @@ public class Pessoa {
         }        
         return"";
     }
+    
+    public String arvoreGenealogica(){
+        
+        if(mae==null){
+            return nome;
+        }else{
+            return mae.arvoreGenealogica() + " -> " + nome;
+        }
+    }
    
 }
 

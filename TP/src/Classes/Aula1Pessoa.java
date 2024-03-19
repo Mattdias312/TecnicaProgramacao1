@@ -36,7 +36,7 @@ public class Aula1Pessoa {
         System.out.println(mae.ApresentarIrmaos());
         
         //#######################################################
-        
+        /*
         Pessoa maeDoJoao = new Pessoa("Maria");
         Pessoa Joao = new Pessoa("João",maeDoJoao);
         Pessoa irmaoJoao = new Pessoa("Jorel",maeDoJoao);
@@ -46,9 +46,13 @@ public class Aula1Pessoa {
            maeDoJoao.addFilho(Joao);
            maeDoJoao.addFilho(irmaoJoao);
            System.out.println("Mãe do João: "+Joao.getMae().getNome());
-           System.out.println("Irmão do João: "+Joao.getMae().getListaFilhos()[1].getNome());
+           System.out.println("Irmão do João: "+Joao.getMae().getListaFilhos()[1].getNome());*/
         
+        Pessoa vovo = new Pessoa("Maria");
+        Pessoa mamae = new Pessoa("Ana",vovo);
+        Pessoa neta = new Pessoa("Maria",mamae);
         
+        System.out.println(neta.arvoreGenealogica(neta));
     }
     
 }
