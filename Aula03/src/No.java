@@ -16,10 +16,10 @@ public class No {
         this.info = info;
     }
     
-    public No getNo(){
+    public No getProximoNo(){
         return this.proximoNo;
     }
-    public void setNo(No proximoNo){
+    public void setProximoNo(No proximoNo){
         this.proximoNo = proximoNo;
     }
     

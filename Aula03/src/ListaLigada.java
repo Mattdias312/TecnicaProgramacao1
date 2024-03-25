@@ -16,7 +16,7 @@ public class ListaLigada {
             primeiroNo = ultimoNo = aux;
             tamanhoLista++;
         }else{
-            ultimoNo.setNo(aux);
+            ultimoNo.setProximoNo(aux);
             tamanhoLista++;
             ultimoNo = aux;
             
@@ -24,24 +24,60 @@ public class ListaLigada {
     }
     
     public void add(Object elemento, int indice){
-        
+        if(indice>0 && indice<tamanhoLista){
+            No noAnterior = getNo(indice-1);
+            No noAtual = new No(elemento,noAnterior.getProximoNo());
+            noAnterior.setProximoNo(noAtual);
+            tamanhoLista++;
+        }else if(indice == 0){
+            No noProximo = getNo(indice);
+            No noAtual = new No(elemento,noProximo);
+            primeiroNo = noAtual;
+            tamanhoLista++;
+        }
     }
     
-    public Object Remover(int indice){
+    public void Remover(int indice){
+        if(indice>=0 && indice<tamanhoLista){
+            No noRemovido = getNo(indice);
+            No noAnterior = getNo(indice-1);
+            noAnterior.setProximoNo(noRemovido.getProximoNo());
+            noRemovido.setInfo(null);
+            noRemovido.setProximoNo(null);
+            tamanhoLista--;
+        }
         
-        return null;
     }
     
     public String concatenaNos(){
         //retorna a info de todos os nós concatenados
-        return "";
+        No buscaNo = primeiroNo;
+        //String infosNos = buscaNo.getInfo().toString();
+        String infosNos = "";
+        
+        for(int i=1;i<tamanhoLista;i++){
+            infosNos += buscaNo.getInfo().toString() + ", ";
+            buscaNo = buscaNo.getProximoNo();
+        }
+        infosNos += buscaNo.getInfo().toString();
+            
+        return infosNos;
     }
     
     
-    public Object get(int indice){
+    public Object getInfo(int indice){
         
         if(indice >=0 && indice<tamanhoLista){
         return percorreLista(indice).getInfo();
+        }else{
+            return null;
+        }
+    }
+    
+    public No getNo(int indice){
+        
+        if(indice >=0 && indice<tamanhoLista){
+        return percorreLista(indice);
         }else{
             return null;
         }
@@ -51,7 +87,7 @@ public class ListaLigada {
         
         No buscaNo = primeiroNo;
         for(int i=0;i<indice;i++){
-            buscaNo = buscaNo.getNo();
+            buscaNo = buscaNo.getProximoNo();
         }
         
         return buscaNo;
