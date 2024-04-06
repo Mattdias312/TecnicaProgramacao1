@@ -57,21 +57,6 @@ public class ListaDuplamenteLigada {
         }
     }
     
-    /*public String concatenaNos(){
-        //retorna a info de todos os nós concatenados
-        NoDuplo buscaNo = primeiroNo;
-        //String infosNos = buscaNo.getInfo().toString();
-        String infosNos = "";
-        
-        for(int i=1;i<tamanhoLista;i++){
-            infosNos += buscaNo.getInfo().toString() + ", ";
-            buscaNo = buscaNo.getProximoNo();
-        }
-        infosNos += buscaNo.getInfo().toString();
-            
-        return infosNos;
-    }*/
-    
     
     public int getInfo(int indice){
         
