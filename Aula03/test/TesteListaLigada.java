@@ -53,7 +53,8 @@ public class TesteListaLigada {
         minhaLista.Remover(1);
         assertEquals("Rodrigo", minhaLista.getInfo(0));
         assertEquals("Maria", minhaLista.getInfo(1));
-        
+         minhaLista.Remover(1);
+        assertEquals("Rodrigo", minhaLista.getInfo(0));
 }
     
     @Test
