@@ -89,27 +89,31 @@ public class ListaDuplamenteLigada {
     public void adicionarOrdenacao(int valor, TipoOrdenacao tipo){
                
         
-            
-            if(tipo.equals(TipoOrdenacao.CRESCENTE)){
-                for(int i=0;i<tamanhoLista;i++){
-                    if(getInfo(i)>valor){
-                        add(valor, i);
-                        return;
-                    } 
+        if(tamanhoLista==0){
+            add(valor);
+            return;
+        }else if(tipo.equals(TipoOrdenacao.CRESCENTE)){
+            for(int i=0;i<tamanhoLista;i++){
+                if(getInfo(i)>valor){
+                    add(valor, i);
+                    return;
+                }else if(tamanhoLista==i+1){
+                    add(valor);
+                    return;
                 }
             }
-            else{
-                for(int i=0;i<tamanhoLista;i++){
-                    if(getInfo(i)<valor){
-                        add(valor, i);
-                        return;
-                    } 
+        }
+        else{
+            for(int i=0;i<tamanhoLista;i++){
+                if(getInfo(i)<valor){
+                    add(valor, i);
+                    return;
+                }else if(tamanhoLista==i+1){
+                    add(valor);
+                    return;
                 }
-                    
             }
-            
-            
-            
-        
+
+        }        
     }
 }

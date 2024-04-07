@@ -84,6 +84,24 @@ public class TesteListaDuplamenteLigada {
 }
     
     @Test
+    public void testecriandoListaComOrdenacaoCrescente(){
+        ListaDuplamenteLigada minhaLista = new ListaDuplamenteLigada();
+        minhaLista.adicionarOrdenacao(4, TipoOrdenacao.CRESCENTE);
+        minhaLista.adicionarOrdenacao(3, TipoOrdenacao.CRESCENTE);
+        minhaLista.adicionarOrdenacao(6, TipoOrdenacao.CRESCENTE);
+        assertEquals(3, minhaLista.getInfo(0));
+        assertEquals(4, minhaLista.getInfo(1));
+        assertEquals(6, minhaLista.getInfo(2));
+        minhaLista.adicionarOrdenacao(5, TipoOrdenacao.CRESCENTE);
+        assertEquals(3, minhaLista.getInfo(0));
+        assertEquals(4, minhaLista.getInfo(1));
+        assertEquals(5, minhaLista.getInfo(2));
+        assertEquals(6, minhaLista.getInfo(3));
+        
+        
+}
+    
+    @Test
     public void testeOrdenacaoDecrescente(){
         ListaDuplamenteLigada minhaLista = new ListaDuplamenteLigada();
         minhaLista.add(6);
@@ -101,4 +119,21 @@ public class TesteListaDuplamenteLigada {
         
 }
     
+    @Test
+    public void testecriandoListaComOrdenacaoDECRESCENTE(){
+        ListaDuplamenteLigada minhaLista = new ListaDuplamenteLigada();
+        minhaLista.adicionarOrdenacao(4, TipoOrdenacao.DECRESCENTE);
+        minhaLista.adicionarOrdenacao(3, TipoOrdenacao.DECRESCENTE);
+        minhaLista.adicionarOrdenacao(6, TipoOrdenacao.DECRESCENTE);
+        assertEquals(6, minhaLista.getInfo(0));
+        assertEquals(4, minhaLista.getInfo(1));
+        assertEquals(3, minhaLista.getInfo(2));
+        minhaLista.adicionarOrdenacao(5, TipoOrdenacao.DECRESCENTE);
+        assertEquals(6, minhaLista.getInfo(0));
+        assertEquals(5, minhaLista.getInfo(1));
+        assertEquals(4, minhaLista.getInfo(2));
+        assertEquals(3, minhaLista.getInfo(3));
+        
+        
+}
 }
