@@ -53,7 +53,9 @@ public class ListaCircularDuplamenteLigada {
         /********************************************************************************************/
         /*Se o índice se refere ao primeiro item, realiza a atualização da referencia do primeiroNo
         Utiliza indice MODULO qtdNos para identificar se o índice se refere ao primeiro Nó*/
-        if((indice%qtdNos)==0){}
+        if((indice%qtdNos)==0){
+            
+        }
             
     }
      
