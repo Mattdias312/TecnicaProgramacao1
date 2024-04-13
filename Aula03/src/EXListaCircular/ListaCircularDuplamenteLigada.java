@@ -40,6 +40,11 @@ public class ListaCircularDuplamenteLigada {
         
         aux=percorreLista(indice);
         
+        novoNo = new NoDuplo(aux, aux.getAnterior(), item);
+        novoNo.getAnterior().setProximo(novoNo);
+        aux.setAnterior(novoNo);
+        qtdNos++;
+        
         /* ****Implemente o código necessário para permitir adiciona em qualquer posição da lista *****/
             
         
