@@ -43,7 +43,6 @@ public class ListaCircularDuplamenteLigada {
         novoNo = new NoDuplo(aux, aux.getAnterior(), item);
         novoNo.getAnterior().setProximo(novoNo);
         aux.setAnterior(novoNo);
-        qtdNos++;
         
         /* ****Implemente o código necessário para permitir adiciona em qualquer posição da lista *****/
             
@@ -54,13 +53,16 @@ public class ListaCircularDuplamenteLigada {
         /*Se o índice se refere ao primeiro item, realiza a atualização da referencia do primeiroNo
         Utiliza indice MODULO qtdNos para identificar se o índice se refere ao primeiro Nó*/
         if((indice%qtdNos)==0){
-            
+            primeiroNo=novoNo;
         }
-            
+        qtdNos++;
+   
     }
      
      public void remover(int indice){
         NoDuplo aux;
+        NoDuplo auxAnterior;
+        NoDuplo auxProximo;
         if((indice%qtdNos)==0 ){
             //% calcula o modulo da divisão do índice pela qtdNos
             //remove da primeira posição da lista e modifica a referencia do primeiroNo
@@ -71,7 +73,12 @@ public class ListaCircularDuplamenteLigada {
         }
         else{
             /**********Implemente o código que permita remove de qualquer outra posição da lista **********/
-            
+            aux=percorreLista(indice);
+            auxAnterior=aux.getAnterior();
+            auxProximo=aux.getProximo();
+            auxAnterior.setProximo(aux.getProximo());
+            auxProximo.setAnterior(auxAnterior);
+            qtdNos--;
             
             
             /*********************************************************************************************/
