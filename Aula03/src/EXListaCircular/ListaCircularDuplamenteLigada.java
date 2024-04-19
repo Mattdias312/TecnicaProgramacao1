@@ -95,9 +95,9 @@ public class ListaCircularDuplamenteLigada {
         
         resposta+= " " + auxiliar.getInfo().toString();
         if(contador< qtdNos-1)//Condicional de Parada
-            return null;//** Adicione aqui a chamada recursiva **
+            return imprimirLista(resposta, auxiliar.getProximo(), contador+1);//** Adicione aqui a chamada recursiva **
         else
-            return null;//** Adicione aqui a resposta do condicional de parada **        
+            return resposta + " <<Fim";//** Adicione aqui a resposta do condicional de parada **        
     }
     
     public Object getLista(int indice){
