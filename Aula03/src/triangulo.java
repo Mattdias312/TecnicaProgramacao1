@@ -18,4 +18,18 @@ public class triangulo {
         }
         return vetor;
     }
+    
+    public double[][] calcularMediaAlunos(double vetor[][]){
+        for(int i=0;i<5;i++){
+            double media =0;
+            for(int j=1; j<4;j++){
+                
+                media=media+vetor[i][j];
+            }
+            media=media/3;
+            vetor[i][4]=media;
+        }
+        return vetor;
+    }
+    
 }

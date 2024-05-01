@@ -22,4 +22,24 @@ public class trianguloTeste {
         Assert.assertArrayEquals(vetor2,teste.verificaPositivoNegativo(vetor));
     }
     
+    @Test
+    public void testeCalcularMediaAlunos(){
+        triangulo teste = new triangulo();
+        double[][] vetor = {
+            {00001.0, 8.0, 5.0, 7.0, 0.0},
+            {00002.0, 3.0, 7.0, 5.0, 0.0},
+            {00003.0, 7.0, 4.0, 8.0, 0.0},
+            {00004.0, 0.0, 8.0, 7.0, 0.0},
+            {00005.0, 7.0, 4.0, 5.0, 0.0}
+        };
+        double[][] vetor2 = {
+            {00001.0, 8.0, 5.0, 7.0, 6.666666666666667},
+            {00002.0, 3.0, 7.0, 5.0, 5.0},
+            {00003.0, 7.0, 4.0, 8.0, 6.333333333333333},
+            {00004.0, 0.0, 8.0, 7.0, 5.0},
+            {00005.0, 7.0, 4.0, 5.0, 5.333333333333333}
+        };
+        Assert.assertArrayEquals(vetor2,teste.calcularMediaAlunos(vetor));
+    }
+    
 }
