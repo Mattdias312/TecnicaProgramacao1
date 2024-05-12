@@ -123,7 +123,6 @@ public class triangulo {
         double variancia = soma / notas.length;
         return Math.sqrt(variancia);
     }
-    
 }
 
 
