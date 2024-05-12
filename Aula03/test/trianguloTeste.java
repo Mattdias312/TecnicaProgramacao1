@@ -42,4 +42,16 @@ public class trianguloTeste {
         Assert.assertArrayEquals(vetor2,teste.calcularMediaAlunos(vetor));
     }
     
+    @Test
+    public void testeEstatistica(){
+        triangulo teste = new triangulo();
+        double[][] vetor = {
+            {00001.0, 8.0, 5.0, 7.0, 0.0},
+            {00002.0, 3.0, 7.0, 5.0, 0.0},
+            {00003.0, 7.0, 4.0, 8.0, 0.0},
+            {00004.0, 0.0, 8.0, 7.0, 0.0},
+            {00005.0, 7.0, 4.0, 5.0, 0.0}
+        };
+        teste.calcularMediaModaDesvioPadrao(vetor);
+    }
 }
