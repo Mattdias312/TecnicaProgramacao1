@@ -58,10 +58,8 @@ public class triangulo {
                     default:
                         break;
                 }
-            }
-               
+            }     
         }
-        for(int i=0;i<3;i++){
             for (int k=0;k<3;k++){
                 switch (k) {
                     case 0:
@@ -84,8 +82,7 @@ public class triangulo {
                         break;
                 }
             }
-        }
-       return vetor;
+       return matriz;
    }
 
     public double calcularMedia(double[] notas) {
