@@ -13,7 +13,7 @@ public class Fundamental extends Aluno {
     
     
     
-    @Override
+    /*
     public String getNota(){
         if(super.nota<5 && super.nota>=0){
             return "D";
@@ -22,9 +22,9 @@ public class Fundamental extends Aluno {
         }else if(super.nota<8){
             return "B";
         }else if(super.nota<10){
-            return "C";
+            return "A";
         }
         return"Nota inválidade";
-    }
+    }*/
     
 }

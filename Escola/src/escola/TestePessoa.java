@@ -9,6 +9,8 @@ public class TestePessoa {
         
         Aluno pedro = new Fundamental("Pedro",8,Genero.MASCULINO.toString());
         pedro.setNota(7);
-        System.out.println("Nota: " + pedro.getNota());
+        System.out.println("NOME: " + pedro.getNome());
+        
+        pedro = new Colegio("Pedro",20,Genero.MASCULINO.toString());
     }
 }
